@@ -1,8 +1,8 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from '../screens/homeScreen/HomeScreen';
-import HeaderLeftImg from '../components/atoms/homeHeader/headerLeftImg/HeaderLeftImg';
-import HeaderRightBurger from '../components/atoms/homeHeader/headerRightBurger/HeaderRightBurger';
+import HeaderLeftLogo from '../containers/home/headerLeftLogo/HeaderLeftLogo';
+import HeaderRightLogo from '../containers/home/headerRightLogo/HeaderRightLogo';
 
 const HomeStackNavigator = () => {
   const Stack = createNativeStackNavigator();
@@ -14,8 +14,10 @@ const HomeStackNavigator = () => {
         component={HomeScreen}
         options={{
           headerTitle: 'Train Time Management',
-          headerLeft: () => <HeaderLeftImg />,
-          headerRight: () => <HeaderRightBurger />,
+          headerLeft: () => <HeaderLeftLogo />,
+          headerRight: () => (
+            <HeaderRightLogo onPress={() => console.log('train')} />
+          ),
         }}
       />
     </Stack.Navigator>

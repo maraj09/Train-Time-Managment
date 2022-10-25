@@ -1,13 +1,16 @@
-import {View, Text} from 'react-native';
+import {View, Text, Image} from 'react-native';
 import React from 'react';
-import {Drawer} from 'react-native-paper';
+import HomeBody from './body/HomeBody';
+import Label from './label/Label';
+import Content from './content/Content';
 
 const Home = () => {
   return (
-    <Drawer.Section title="Some title">
-      <Drawer.Item label="First Item" />
-      <Drawer.Item label="Second Item" />
-    </Drawer.Section>
+    <View>
+      <HomeBody />
+      <Label />
+      <Content />
+    </View>
   );
 };
 

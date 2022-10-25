@@ -1,18 +1,18 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
-const HeaderLeftImg = () => {
+const HeaderLeftLogo = () => {
   return (
     <View>
       <Image
         style={styles.img}
-        source={require('../../../../assets/images/train-station.png')}
+        source={require('../../../assets/images/train-station.png')}
       />
     </View>
   );
 };
 
-export default HeaderLeftImg;
+export default HeaderLeftLogo;
 
 const styles = StyleSheet.create({
   img: {
