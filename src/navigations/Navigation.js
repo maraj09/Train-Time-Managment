@@ -1,12 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import SplashScreen from '../screens/splashScreen/SplashScreen';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import HomeScreen from '../screens/homeScreen/HomeScreen';
+import HomeStackNavigator from './HomeStackNavigator';
 
 const Navigation = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const Stack = createNativeStackNavigator();
 
   useEffect(() => {
     setTimeout(() => {
@@ -24,13 +22,7 @@ const Navigation = () => {
   return (
     <>
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen
-            name="Home"
-            component={HomeScreen}
-            options={{headerShown: false}}
-          />
-        </Stack.Navigator>
+        <HomeStackNavigator />
       </NavigationContainer>
     </>
   );
