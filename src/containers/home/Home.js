@@ -1,4 +1,4 @@
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, ScrollView} from 'react-native';
 import React from 'react';
 import HomeBody from './body/HomeBody';
 import Label from './label/Label';
@@ -6,11 +6,11 @@ import Content from './content/Content';
 
 const Home = () => {
   return (
-    <View>
+    <ScrollView>
       <HomeBody />
       <Label />
       <Content />
-    </View>
+    </ScrollView>
   );
 };
 

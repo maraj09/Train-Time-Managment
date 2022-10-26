@@ -6,7 +6,7 @@ const HeaderRightLogo = ({onPress}) => {
   return (
     <View>
       <IconButton
-        icon={'train'}
+        icon={'dots-vertical'}
         size={30}
         iconColor={MD3Colors.primary0}
         onPress={() => onPress()}
